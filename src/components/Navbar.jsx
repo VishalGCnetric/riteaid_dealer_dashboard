@@ -8,13 +8,33 @@ import { TbMessageCircle2 } from "react-icons/tb";
 import { IoIosArrowDown } from "react-icons/io";
 import userFour from '../images/user/user-0.png'
 import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { getVoltmxToken } from '../slices/sellerSlice';
 
 
 const Navbar = ({sidebarOpen,setSidebarOpen}) => {
   const Navigate = useNavigate()
+  const dispatch = useDispatch();
   const [isDarkMode, setIsDarkMode] = useState(false)
   // const [sidebarOpen, setSidebarOpen] = useState(true)
   const [isUserDropdownOpen, setUserDropdownOpen] = useState(false)
+  
+  // Fetch Voltmx Token every 5 minutes
+  useEffect(() => {
+    const fetchToken = async () => {
+      try {
+        await dispatch(getVoltmxToken()).unwrap();
+      } catch (error) {
+        console.error("Error fetching Voltmx token:", error);
+      }
+    };
+
+    fetchToken(); // Call immediately when component mounts
+
+    const interval = setInterval(fetchToken, 5 * 60 * 1000); // Call every 5 minutes
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [dispatch]);
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark');

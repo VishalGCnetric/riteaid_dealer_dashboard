@@ -216,7 +216,7 @@ const OrderDetails = () => {
                 unitPrice: formatCurrency(line.linePrice),
                 quantity: line.quantity,
                 total: formatCurrency(line.linePrice),
-                image: line?.featuredAsset?.preview,
+                image: line?.productVariant?.featuredAsset?.preview,
               }))}
               summary={{
                 totalDiscount: `- ${formatCurrency(discount)}`,
@@ -374,7 +374,7 @@ const OrderDetails = () => {
                 {new Date(updatedAt).toLocaleString()}
               </span>
             </p>
-            <QRCodeComponent orderId={id} />
+            {/* <QRCodeComponent orderId={id} /> */}
           </div>
         </div>
       </div>

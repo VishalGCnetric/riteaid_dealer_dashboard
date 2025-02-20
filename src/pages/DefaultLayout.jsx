@@ -7,7 +7,7 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 const DefaultLayout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [isAuth,setIsAuth]=useState( true);
+  const [isAuth,setIsAuth]=useState( localStorage.getItem("auth"));
   const naviagate=useNavigate();
   const Location=useLocation();
 

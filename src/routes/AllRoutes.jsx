@@ -29,7 +29,7 @@ const AllRoutes = () => {
 
   return (
     <><Routes>
-        <Route path="/" element={<DefaultLayout><Dashboard/></DefaultLayout>} />
+        <Route path="/" element={<LogIn />} />
         <Route path="/dashboard" element={<DefaultLayout><Dashboard/></DefaultLayout>} />
         <Route path="/auth/sign-in" element={<LogIn />} />
         <Route path="/auth/sign-up" element={<SignUp />} />

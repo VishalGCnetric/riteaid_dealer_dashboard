@@ -42,14 +42,27 @@ const handleLogout =()=>{
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}>
             {sidebarOpen&&<div onClick={()=>setSidebarOpen(!sidebarOpen)}><RxCross2 className='text-3xl text-zinc-200'/></div>}
-            <div className="flex items-center mb-8">
-                <img
-                    src="https://companieslogo.com/img/orig/RAD-73c35102.png?t=1720244493"
-                    alt="logo"
-                    className="mr-2 h-20"
-                />
-                <span className="text-2xl font-semibold whitespace-nowrap"> PHARMACY <br />ADMIN PANEL </span>
-            </div>
+            {/* <div className="flex items-center space-x-3 p-2 bg-white shadow-md rounded-lg">
+  <img
+    src="https://www.pennlive.com/resizer/v2/B7NQKWV5SZD3TP63FIZITMPVZY.jpg?auth=e8760a5d222d7e64542545bb4b5536ec45061a5d8e873c64c445bc0bd5532cac&width=1280&quality=90"
+    alt="logo"
+    className="h-10 w-10 object-contain"
+  />
+  <span className="text-lg font-semibold text-gray-700">
+    PHARMACY ADMIN PANEL
+  </span>
+</div> */}
+<div className="flex flex-col items-center    rounded-lg">
+  <img
+    src="https://s201.q4cdn.com/604412960/files/images/logo-gallery/RA_Logo_2020-PNG.png"
+    alt="logo"
+    className=" w-[120px] h-16 object-contain"
+  />
+  <span className="bg-red-600 text-white text-xs font-semibold mt-1 px-2 py-1  rounded-full  tracking-wide">
+    Pharmacy Admin Panel
+  </span>
+</div>
+
             <nav className='mt-5 TEXT-xl'>
                 <div className="mb-4">
                     <Link 

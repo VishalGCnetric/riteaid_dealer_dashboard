@@ -34,8 +34,7 @@ const PharmaSalesHeader = () => {
       {/* Main header */}
       <div className="bg-[#7a9950] text-white p-4 flex justify-between items-center">
         <div className="flex items-center">
-          <h1 className="text-2xl font-bold mr-6">PHARMACY
-          ADMIN PANEL</h1>
+          <h1 className="text-2xl font-bold mr-6">DASHBOARD</h1>
           <div className="w-px h-8 bg-white mx-4"></div>
           <h2 className="text-xl">SALES ANALYSIS</h2>
         </div>

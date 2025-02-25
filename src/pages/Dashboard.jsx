@@ -2,13 +2,16 @@ import React from 'react'
 import DashboardItem from '../components/DashboardItems'
 import DashboardCharts from '../components/DashboardCharts'
 import OrderListComponent from '../components/OrderListComponent'
+import PharmaSalesHeader from '../components/PharmaSalesHeader'
 
 const Dashboard = () => {
   return (
 
-<main className="w-full dark:bg-black bg-white flex flex-col items-center mt-2">
-        <h2 className="text-3xl font-bold text-zinc-800 dark:text-zinc-100 mb-4">Dashboard</h2>
-        <div className="w-full grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7.5">
+<main className="w-full dark:bg-black bg-white flex flex-col items-center ">
+        {/* <h2 className="text-3xl font-bold text-zinc-800 dark:text-zinc-100 mb-4">Dashboard</h2> */}
+       
+    <PharmaSalesHeader/>
+        {/* <div className="w-full grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7.5">
         <DashboardItem title=" Order PickUp" total="$3.456K" rate="0.43%" levelUp>
           <svg
             className="fill-primary dark:fill-white"
@@ -93,11 +96,11 @@ const Dashboard = () => {
             />
           </svg>
         </DashboardItem>
-        </div>
-        <div className="w-full">
+        </div> */}
+        <div className="w-full ">
         <DashboardCharts/>
         </div>
-        <div className="w-full bg-white dark:bg-black">
+        <div className="w-full  bg-[#EAF1E0]  dark:bg-black mt-10">
 
        < OrderListComponent/>
         </div>

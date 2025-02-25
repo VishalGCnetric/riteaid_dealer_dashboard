@@ -1,6 +1,6 @@
 import React from 'react';
 
-const tableHeaderClass = 'py-2 px-4 border-b-2 border-border text-left text-sm font-semibold';
+const tableHeaderClass = 'py-2 px-4 text-white border-b-2 border-border text-left text-sm font-semibold';
 const tableCellClass = 'py-2 px-4 border-b border-border';
 
 const ProductItem = ({ image,  name, sku, unitPrice, quantity, total }) => (
@@ -36,7 +36,7 @@ const OrderProductTable = ({items,summary}) => {
 
 return  <div className="overflow-x-auto p-4 bg-card border border-border rounded-lg">
     <table className="min-w-full ">
-      <thead>
+      <thead className=" bg-[#7a9950]">
         <tr>
           <th className={tableHeaderClass}>IMAGE</th>
           <th className={tableHeaderClass}>PRODUCT NAME</th>

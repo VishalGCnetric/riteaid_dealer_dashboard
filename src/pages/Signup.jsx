@@ -652,17 +652,16 @@ const SignUp = () => {
   return (
     <>
       <Toaster position="bottom-right" reverseOrder={false} />
-      <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+      <div className="rounded-sm border-2 border-stroke  bg-[#EAF1E0] shadow-default dark:border-strokedark dark:bg-boxdark">
         <div className="relative flex justify-center">
           <div className="w-1/2 h-screen left-0 fixed hidden p-4 md:block ">
             <div className="px-26 text-center">
               <div className="inline-block">
-                <h2 className="text-2xl font-bold text-black dark:text-white sm:text-title-xl2">
-                  Dealer Panel
-                </h2>
+                <h2 className="text-2xl mt-16 font-bold text-black dark:text-white sm:text-title-xl2">
+                Pharmacy Admin Panel               </h2>
               </div>
-              <span className="mt-15 inline-block">
-                <img src={img} alt="mobile" loading="lazy" />
+              <span className="text-center align-center pl-20 h-[80vh] mt-4 inline-block">
+                <img src={img} alt="mobile" loading="lazy" className="h-full"/>
               </span>
             </div>
           </div>
@@ -698,7 +697,7 @@ const SignUp = () => {
                 <button
                  type="button"
                  onClick={() => setShowAdditionalFields(!showAdditionalFields)}
-      className="flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors"
+      className="flex items-center gap-2 px-4 py-2 bg-[#7a9950] text-white rounded-md hover:bg-indigo-700 transition-colors"
     >
       <FiInfo className="text-xl" />
       <span>                    {showAdditionalFields ? 'Hide Additional Fields' : 'Show Additional Fields'}
@@ -746,7 +745,7 @@ const SignUp = () => {
                     <input
                       type="submit"
                       value="Create account"
-                      className="w-full cursor-pointer rounded-lg border border-primary bg-blue-600 p-4 text-white transition hover:bg-opacity-90"
+                      className="w-full cursor-pointer rounded-lg border border-primary bg-[#7a9950]  p-4 text-white transition hover:bg-opacity-90"
                     />
                   )}
                 </div>

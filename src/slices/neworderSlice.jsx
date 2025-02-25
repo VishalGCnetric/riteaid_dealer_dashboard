@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import OrderDetails from '../pages/OrderDetails';
 
 const BASE_URL = 'https://m100003239002.demo-hclvoltmx.net/services/DealerVendureApi';
 
@@ -27,15 +28,16 @@ const fetchOrders = async (endpoint, body = null) => {
     const tokens = getTokens();
     if (!tokens) throw new Error('Authentication tokens not found');
   
-    const { vendureAuthToken, voltmxToken, channelToken } = tokens;
+    const { vendureAuthToken, voltmxToken, channelToken ,adminToken} = tokens;
     console.log(`Fetching ${endpoint} orders...`); // Debugging log
+    const newtoken=endpoint=="orderDetails"?adminToken:vendureAuthToken;
   
     try {
       const response = await axios.post(`${BASE_URL}/${endpoint}`, body, {
         headers: {
           'Vendure-Token': channelToken,
           'Accept': 'application/json',
-          'Authorization': `Bearer ${vendureAuthToken}`,
+          'Authorization': `Bearer ${newtoken}`,
           'X-Voltmx-Authorization': voltmxToken,
           'Content-Type': 'application/json',
         },

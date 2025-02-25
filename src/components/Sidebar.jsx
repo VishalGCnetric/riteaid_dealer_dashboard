@@ -38,17 +38,17 @@ const handleLogout =()=>{
 
         // <div className=  {`bg-zinc-900 text-zinc-200 w-60 h-screen hidden p-4 lg:block`}>
         <div  style={{zIndex:100,width:'280px'}}
-        className={`absolute left-0 p-8 top-0 z-9999 flex h-screen shadow-xl w-96.5 flex-col overflow-y-hidden bg-white duration-300 ease-linear dark:text-textColor dark:bg-customBlue lg:static lg:translate-x-0 ${
+        className={`absolute left-0 p-8 top-0 z-9999 flex h-screen shadow-xl w-96.5 flex-col overflow-y-hidden bg-[#EAF1E0] duration-300 ease-linear dark:text-textColor dark:bg-customBlue lg:static lg:translate-x-0 ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}>
             {sidebarOpen&&<div onClick={()=>setSidebarOpen(!sidebarOpen)}><RxCross2 className='text-3xl text-zinc-200'/></div>}
             <div className="flex items-center mb-8">
                 <img
-                    src="https://openui.fly.dev/openui/24x24.svg?text=📊"
+                    src="https://companieslogo.com/img/orig/RAD-73c35102.png?t=1720244493"
                     alt="logo"
-                    className="mr-2"
+                    className="mr-2 h-20"
                 />
-                <span className="text-3xl font-semibold whitespace-nowrap"> Dealer Panel </span>
+                <span className="text-2xl font-semibold whitespace-nowrap"> PHARMACY <br />ADMIN PANEL </span>
             </div>
             <nav className='mt-5 TEXT-xl'>
                 <div className="mb-4">

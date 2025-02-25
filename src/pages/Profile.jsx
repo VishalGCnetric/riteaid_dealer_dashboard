@@ -78,7 +78,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="overflow-hidden rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+    <div className="overflow-hidden rounded-sm border border-stroke bg-[#EAF1E0] shadow-default dark:border-strokedark dark:bg-boxdark">
       <div className="relative z-20 h-48 md:h-64">
         <img
           src={CoverOne}
@@ -135,7 +135,7 @@ const Profile = () => {
                 {userData?.seller?.name || 'Shop Name'}
               </h3>
               <p className="mb-2 text-lg text-gray-600 dark:text-gray-400">
-                Owned by: {`${userData?.administrator?.firstName }  ${userData?.administrator?.lastName}` || 'Owner Name'}
+                Managed by: {`${userData?.administrator?.firstName }  ${userData?.administrator?.lastName}` || 'Owner Name'}
               </p>
               <p className="mb-2 text-lg text-gray-600 dark:text-gray-400">
                 Phone: {userData?.seller?.customFields?.phoneNumber || 'Phone Number'}

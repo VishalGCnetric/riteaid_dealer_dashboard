@@ -145,7 +145,7 @@ const OrderDetails = () => {
   // }
 
   if (!order || !order.order) {
-    return <div>No order found</div>;
+    return <Loader />;
   }
 
   const {
@@ -163,12 +163,13 @@ const OrderDetails = () => {
     nextStates,
     fulfillments,
     deliveryType,
+    aggregateOrder
   } = order.order;
 
   const isApproved = fulfillments?.[0]?.id !== undefined;
   
   const getBadgeColor = () => {
-    switch (deliveryType) {
+    switch (aggregateOrder?.customFields?.deliveryType) {
       case "Standard Shipment":
         return "bg-blue-400 text-white";
       case "ship":
@@ -186,7 +187,7 @@ const OrderDetails = () => {
     }, 0) - subTotal;
 
   return (
-    <div className="p-2 bg-white dark:bg-black rounded-lg">
+    <div className="p-2  bg-[#EAF1E0] dark:bg-black rounded-lg">
       <div className="mb-6">
         <Breadcrumb />
       </div>
@@ -199,8 +200,8 @@ const OrderDetails = () => {
           disabled={isApproved}
           className={`${
             isApproved
-              ? "bg-blue-300 text-white"
-              : "bg-primary text-white dark:bg-primary-foreground dark:text-primary-foreground"
+              ? " bg-[#a6bb7b] text-white"
+              : "bg-[#7a9950] text-white dark:bg-primary-foreground dark:text-primary-foreground"
           } px-4 py-2 rounded-md`}
         >
           {isApproved ? "Approved" : "Approve"}
@@ -294,7 +295,7 @@ const OrderDetails = () => {
                   <span
                     className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${getBadgeColor()}`}
                   >
-                    {deliveryType && deliveryType.charAt(0).toUpperCase() + deliveryType.slice(1)}
+                    {aggregateOrder?.customFields?.deliveryType && aggregateOrder?.customFields?.deliveryType.charAt(0).toUpperCase() + aggregateOrder?.customFields?.deliveryType.slice(1)}
                   </span>
                 </div>
                 <h3 className="text-md font-semibold mb-1">Shipping address</h3>

@@ -15,8 +15,11 @@ const OrderList = ({ Heading, show, customerOrders }) => {
     const itemsToDisplay = show ? customerOrders?.slice(0, 4) : customerOrders;
 
     return (
-        <div className="w-full bg-white p-4 bg-card border border-border rounded-lg dark:bg-customBlue shadow-lg">
-            <div className="flex justify-between border-b-2 border-border pb-2">
+        <div className="w-full bg-[#EAF1E0] p-4 bg-card border border-border rounded-lg dark:bg-customBlue shadow-lg">
+            <div
+             className="bg-[#7a9950] text-white p-4 flex justify-between items-center"
+             
+             >
                 <div>
                     <h2 className="text-2xl font-bold text-card-foreground">
                         {Heading} ({customerOrders?.length})
@@ -25,7 +28,7 @@ const OrderList = ({ Heading, show, customerOrders }) => {
                 <div>
                     {show &&  (
                         <Link to="/all-orders">
-                            <button className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-700">
+                            <button className="border-2 border-white text-white py-2 px-4 rounded-md hover:bg-blue-700">
                                 View More
                             </button>
                         </Link>
@@ -39,9 +42,9 @@ const OrderList = ({ Heading, show, customerOrders }) => {
                 </div>
             ) : (
                 <div className="w-full overflow-x-auto">
-                    <table className="w-full mt-6 bg-card border-border rounded-lg">
-                        <thead>
-                            <tr className="border-b-[1px]">
+                    <table className="w-full  bg-card border-border rounded-lg">
+                        <thead className="bg-[#e1e8ce] pt-6">
+                            <tr className="border-b-[1px] ">
                                 <th className=" pl-2 pr-4 py-3 text-left text-s font-medium text-muted-foreground uppercase tracking-wider">Customer</th>
                                 <th className="pr-4 py-3  text-s font-medium text-muted-foreground uppercase tracking-wider text-center">Product</th>
                                 <th className="pr-4 py-3 text-center text-s font-medium text-muted-foreground uppercase tracking-wider">Order ID</th>

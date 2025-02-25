@@ -11,7 +11,7 @@ module.exports = {
       },
       colors: {
         customBlue: '#24303F',
-        btnBlue: '#3056D3',
+        btnBlue: '#7a9950',
         secondry: '#F6FAFF',
         secondryDark: '#1A222C',
         textColor: '#AEB7C0',

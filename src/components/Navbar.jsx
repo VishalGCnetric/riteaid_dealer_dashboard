@@ -54,14 +54,14 @@ const toggleTheme = () => {
 };
   return (
     // <div className="flex items-center justify-between p-4 bg-card text-card-foreground">
-    <div style={{zIndex:100}} className="sticky dark:bg-customBlue shadow-xl dark:text-gray-400 top-0 z-999 p-6 flex w-full bg-white drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none justify-between">
-      <div className="flex lg:hidden items-center space-x-4">
+    <div style={{zIndex:100}} className="sticky dark:bg-customBlue shadow-xl dark:text-gray-400 top-0 z-999 p-6 flex w-full bg-[#EAF1E0] drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none justify-between">
+      <div className="flex lg:hidden items-center space-x-4 bg-gray-200">
         <button className="p-2" onClick={() => setSidebarOpen(!sidebarOpen)}>
           <GiHamburgerMenu className='text-3xl' />
         </button>
         {/* <img aria-hidden="true" alt="logo" src="" /> */}
       </div>
-      <div className="flex items-center hidden space-x-4 flex-grow mx-4 sm:block">
+      <div className="flex items-center hidden space-x-4 bg-gray-200 flex-grow mx-4 sm:block">
         <div className="relative flex items-center w-full">
           <span className="absolute left-3 text-muted-foreground">
             <BsSearch className='text-2xl' />
@@ -73,7 +73,7 @@ const toggleTheme = () => {
           />
         </div>
       </div>
-      <div className="flex items-center space-x-4 ">
+      <div className="flex items-center space-x-4 bg-gray-200">
         <button
           className="relative p-2 rounded-full text-secondary-foreground hover:text-btnBlue"
           onClick={toggleTheme}

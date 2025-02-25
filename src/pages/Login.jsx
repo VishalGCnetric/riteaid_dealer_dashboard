@@ -90,13 +90,13 @@ useEffect(()=>{
   position="bottom-right"
   reverseOrder={false}
 />
-      <div className=" w-full h-screen rounded-sm pb-2 border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+      <div className=" w-full h-screen rounded-sm pb-2 border border-stroke bg-[#EAF1E0] shadow-default dark:border-strokedark dark:bg-boxdark">
         <div className="flex justify-center items-center">
           <div className="  hidden w-full h-screen md:block ">
             <div className=" flex flex-col px-26 text-center">
               <div className=" mt-10 inline-block" >
               <h2 className="mt-12 text-2xl font-bold text-black dark:text-white sm:text-title-xl2">
-              Dealer Panel</h2>
+              Pharmacy Admin Panel</h2>
                 
               </div>
 
@@ -173,7 +173,7 @@ useEffect(()=>{
       {errors.password && (
         <p className="text-red-500 text-xs mt-1">{errors.password}</p>
       )}
-      <span className="absolute right-4 top-4">
+      <span className="absolute right-4 top-4 ">
       <svg
                         className="fill-current"
                         width="22"
@@ -199,7 +199,7 @@ useEffect(()=>{
 
                 <div className="mb-5">
                   {loading?
-                  <button className=" relative w-full h-14 cursor-pointer rounded-lg border border-primary bg-blue-600 p-4 text-white transition hover:bg-opacity-90">
+                  <button className=" relative w-full h-14 cursor-pointer rounded-lg border border-primary bg-[#7a9950] p-4 text-white transition hover:bg-opacity-90">
 <div className="absolute top-[40%] left-[50%] h-4 w-4 animate-spin rounded-full border-4 border-solid border-white border-t-transparent"></div>
                   </button>
                 :
@@ -207,7 +207,7 @@ useEffect(()=>{
                     type="submit"
                     value="Sign In"
                     
-                    className="w-full h-14 cursor-pointer rounded-lg border border-primary bg-blue-600 p-4 text-white transition hover:bg-opacity-90"
+                    className="w-full h-14 cursor-pointer rounded-lg border border-primary bg-[#7a9950] p-4 text-white transition hover:bg-opacity-90"
                   />}
                 </div>
 

@@ -28,8 +28,8 @@ const formatCurrency = (amount) => {
       : currency === "INR"
       ? "₹"
       : "";
-
-  return `${symbol}${amount.toLocaleString()}`;
+const newamount=amount/100
+  return `${symbol}${(newamount.toLocaleString())}`;
 };
 
 const OrderDetails = () => {
